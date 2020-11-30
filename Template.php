@@ -1,12 +1,12 @@
 <?php
 
 
-echo "<h1 id='headerOne'>Welkom op de homepagina!</h1><br>";
+
 ?>
 <!DOCTYPE HTML>
 <header>
     <nav>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="stylesheettemplate.css">
         <div class=divheader>
             CoinPiano®
         </div>
@@ -41,22 +41,21 @@ echo "<h1 id='headerOne'>Welkom op de homepagina!</h1><br>";
                    class="swag">Hier</a> kun je meer lezen over het gedachtenproces achter mijn design!
             </p>
         </div>
-    </section>
-
 
     <div>
-        <section>
             <p class="swag">Met acht individuele toetsen, of munten in dit geval, heb je ruim een hele bluestoonladder
                 tot je beschikking! Daarom is dit product goed geschikt voor de muzikale ontwikkeling van het kind.
                 <br>
             </p>
+
     </div>
+
+
     <div>
-        <img src="https://i.imgur.com/TpqIkCa.jpg">
-        <img src="https://i.imgur.com/vfI3XOG.jpg">
-</main>
+        <img src="https://i.imgur.com/TpqIkCa.jpg" alt="">
+        <img src="https://i.imgur.com/vfI3XOG.jpg" alt="">
 </div>
-</section>
+</main>
 <footer>
     © 3MAC Enterprises
 </footer>";
