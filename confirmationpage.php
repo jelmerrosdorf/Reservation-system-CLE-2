@@ -1,4 +1,4 @@
-<html lang="nl">
+<!DOCTYPE html>
 
     <head>
         <meta charset="UTF-8">
@@ -10,4 +10,6 @@
         <div>Bedankt voor je afspraak!</div>
     </body>
 
-</html>
+<footer>
+
+</footer>
