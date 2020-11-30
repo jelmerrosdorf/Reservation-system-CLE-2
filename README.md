@@ -1,2 +1,2 @@
-# Reserveringssysteem-CLE2
-Reserveringssysteem voor Chris (barber). Gemaakt door Bram &amp; Jelmer. 
+# Reservation system CLE 2
+Reservation system for barber Chris. Made by Bram and Jelmer. 
