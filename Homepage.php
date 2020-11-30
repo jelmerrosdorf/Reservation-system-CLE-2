@@ -1,6 +1,5 @@
 <?php
 
-    echo "Welkom Bram op Git(hub)! :D";
-    echo "Dankjewel Jelmer!";
+    echo "<h1>Welkom op de homepagina!</h1><br>";
 
 
