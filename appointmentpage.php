@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
-<header>Welkom bij CutKapsel!</header>
+<header>Reserveer hier je afspraak!</header>
 
 <nav>
     <div>Portfolio</div>
     <div>Over ons</div>
+    <div>Contact</div>
+    <div><a href="./appointmentpage.php">Reserveren</div>
 </nav>
 
 <main>
@@ -41,3 +43,6 @@
             <button type="submit">Reserveren</button>
         </div>
     </form>
+</main>
+</body>
+</html>
