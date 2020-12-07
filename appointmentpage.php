@@ -12,6 +12,7 @@
 <header>Reserveer hier je afspraak!</header>
 
 <nav>
+    <div id="divHome"><a href="./Homepage.php">Home</a></div>
     <div>Portfolio</div>
     <div>Over ons</div>
     <div>Contact</div>
@@ -34,6 +35,9 @@
             <label for="dateAppointment">Datum:</label>
             <input type="date" id="dateAppointment" name="dateAppointment"
                    value="date('Y/m/d')" required pattern="\d{4}-\d{2}-\d{2}">
+        </div>
+        <div>
+
         </div>
         <div>
             <label for="verven">Haar verven?</label>

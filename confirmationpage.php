@@ -14,6 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <nav>
+    <div id="divHome"><a href="./Homepage.php">Home</a></div>
     <div>Portfolio</div>
     <div>Over ons</div>
     <div>Contact</div>

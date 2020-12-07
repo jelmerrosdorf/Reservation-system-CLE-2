@@ -12,6 +12,7 @@
 <header>Welkom bij CutKapsel!</header>
 
 <nav>
+    <div id="divHome"><a href="./Homepage.php">Home</a></div>
     <div>Portfolio</div>
     <div>Over ons</div>
     <div>Contact</div>
