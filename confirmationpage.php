@@ -1,7 +1,7 @@
 <?php
 
 ?>
-
+<!DOCTYPE HTML>
 <html lang="nl">
 
     <head>
@@ -22,7 +22,7 @@
 
 
     <?php
-    $datumTekst = date('d-m-Y', strtotime($_POST['date']));
+    $datumTekst = date('d-m-Y', strtotime($_POST['dateAppointment']));
     echo "Naam: " . $_POST['nameCustomer'] . "</br>";
     echo "E-mailadres: " . $_POST['email'] . "</br>";
     echo "Datum: " . $datumTekst . "</br>";
