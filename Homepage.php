@@ -15,7 +15,7 @@
     <div>Portfolio</div>
     <div>Over ons</div>
     <div>Contact</div>
-    <div><a href="./appointmentpage.php">Reserveren</div>
+    <div><a href="./appointmentpage.php">Reserveren</a></div>
 </nav>
 </body>
 </html>

@@ -6,13 +6,21 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>confirmationpage</title>
+        <title>Geslaagd!</title>
         <link rel="stylesheet" href="style.css">
     </head>
 <body>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reservering geslaagd</title>
+
+<nav>
+    <div>Portfolio</div>
+    <div>Over ons</div>
+    <div>Contact</div>
+    <div><a href="./appointmentpage.php">Reserveren</a></div>
+</nav>
+
+
     <?php
     $datumTekst = date('d-m-Y', strtotime($_POST['date']));
     echo "Naam: " . $_POST['nameCustomer'] . "</br>";
