@@ -11,13 +11,13 @@
 <body>
 <header>Welkom bij CutKapsel!</header>
 
-<nav>
-    <div id="divHome"><a href="./Homepage.php">Home</a></div>
-    <div>Portfolio</div>
-    <div>Over ons</div>
-    <div>Contact</div>
-    <div><a href="./appointmentpage.php">Reserveren</a></div>
-</nav>
+<div class="topnav">
+    <a class="active" href="./Homepage.php">Home</a>
+    <a class="inactive">Portfolio</a>
+    <a class="inactive">Personalia</a>
+    <a class="inactive">Contact</a>
+    <a class="inactive" href="./appointmentpage.php">Reserveren</a>
+</div>
 </body>
 </html>
 

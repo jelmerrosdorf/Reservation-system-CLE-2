@@ -11,13 +11,14 @@
 <body>
 <header>Reserveer hier je afspraak!</header>
 
-<nav>
-    <div id="divHome"><a href="./Homepage.php">Home</a></div>
-    <div>Portfolio</div>
-    <div>Over ons</div>
-    <div>Contact</div>
-    <div><a href="./appointmentpage.php">Reserveren</a></div>
-</nav>
+
+    <div class="topnav">
+        <a class="inactive" href="./Homepage.php">Home</a>
+        <a class="inactive">Portfolio</a>
+        <a class="inactive">Personalia</a>
+        <a class="inactive">Contact</a>
+        <a class="active" href="./appointmentpage.php">Reserveren</a>
+    </div>
 
 <main>
     <h1 id="reserveren">Reserveren</h1>
