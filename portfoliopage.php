@@ -37,7 +37,7 @@
     .grid-item--height2 { height: 140px; }
 </style>
 <script>
-    // Grid voor afbeeldingen van kapsels
+    // Grid voor afbeeldingen van kapsels via jQuery ingevoegd
 
     $('.grid').masonry({
         // options...
@@ -45,6 +45,8 @@
         columnWidth: 200
     });
 </script>
+
+<!-- jQuery wordt afgekeurd. Beste <src> voor jS-->
 
 <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
         <div class="grid-item"><img src="http://placekitten.com/80/60"></div>
