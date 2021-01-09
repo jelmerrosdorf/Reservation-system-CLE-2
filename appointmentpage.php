@@ -14,8 +14,8 @@
 
     <div class="topnav">
         <a class="inactive" href="./Homepage.php">Home</a>
-        <a class="inactive">Portfolio</a>
-        <a class="inactive">Personalia</a>
+        <a class="inactive" href="./portfoliopage.php">Portfolio</a>
+        <a class="inactive" href="./aboutpage.php">Personalia</a>
         <a class="inactive">Contact</a>
         <a class="active" href="./appointmentpage.php">Reserveren</a>
     </div>
