@@ -111,8 +111,27 @@ label{
     padding:5px;
 }
 
-/* Css voor portfoliopage*/
 * { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+    background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
 
 .grid-sizer,
 .grid-item {
@@ -121,30 +140,9 @@ label{
 
 .grid-item {
     float: left;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-bottom: 1em;
-    cursor: pointer;
 }
-
-.grid-item:after {
-    position: absolute;
-    content: "";
-    top: 0; bottom: 0;
-    left: 0.5em; right: 0.5em;
-    background: rgba(0,0,0,0.4);
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
-
-
 
 .grid-item img {
     display: block;
     max-width: 100%;
-    -webkit-filter: grayscale(1);
-}
-
-.row {
-    margin: 20px auto;
 }

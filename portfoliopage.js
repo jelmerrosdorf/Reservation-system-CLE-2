@@ -1,11 +1,11 @@
-var $grid = $('.grid').masonry({
-    // set itemSelector so .grid-sizer is not used in layout
+// external js: masonry.pkgd.js, imagesloaded.pkgd.js
+
+// init Masonry
+var grid = document.querySelector('.grid');
+
+var msnry = new Masonry( grid, {
     itemSelector: '.grid-item',
-    // use element for option
     columnWidth: '.grid-sizer',
     percentPosition: true
-})
-
-$grid.imagesLoaded().progress( function() {
-    $grid.masonry();
 });
+
