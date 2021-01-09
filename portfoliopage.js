@@ -9,3 +9,8 @@ var msnry = new Masonry( grid, {
     percentPosition: true
 });
 
+
+imagesLoaded( grid ).on( 'progress', function() {
+    // layout Masonry after each image loads
+    msnry.layout();
+});
