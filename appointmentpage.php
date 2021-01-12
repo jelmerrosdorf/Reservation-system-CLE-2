@@ -38,7 +38,7 @@
                    value="date('Y/m/d')" required pattern="\d{4}-\d{2}-\d{2}">
         </div>
         <div>
-            <label for="time">Tijd:</label>
+            <label for="appointmentTime">Tijd:</label>
             <input type="time" id="appointmentTime" name="time" required>
         </div>
         <div>
