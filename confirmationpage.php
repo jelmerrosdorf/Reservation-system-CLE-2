@@ -29,6 +29,7 @@
     echo "Naam: " . $_POST['nameCustomer'] . "</br>";
     echo "E-mailadres: " . $_POST['email'] . "</br>";
     echo "Datum: " . $datumTekst . "</br>";
+    echo "Tijd:" . $_POST['time'] . "</br>";
 
     if (isset($_POST['verven'])){
         echo '☑ Verven';
