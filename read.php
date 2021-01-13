@@ -24,14 +24,13 @@ mysqli_close($db);
 <head>
     <title>CutKapsel</title>
     <meta charset="utf-8"/>
-    <link   />  // css goes here
+    <link rel="stylesheet" type="text/css" href="readstyle.css"  />
 </head>
 <body>
 <h1>Afspraken voor Chris</h1>
 <table>
     <thead>
     <tr>
-        <th></th>
         <th>#</th>
         <th>Naam</th>
         <th>Emailadres</th>
@@ -46,11 +45,12 @@ mysqli_close($db);
     </tr>
     </tfoot>
 
-    // Table to show the appointments
+    <!-- Table to show the appointments -->
     <tbody>
     <?php foreach ($appointments as $appointment) { ?>
         <tr>
             <td><?= $appointment['id'] ?></td>
+            <td><?= $appointment['name'] ?></td>
             <td><?= $appointment['email'] ?></td>
             <td><?= $appointment['date'] ?></td>
             <td><?= $appointment['time'] ?></td>
