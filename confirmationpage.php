@@ -25,8 +25,8 @@
 
 
     <?php
-    $datumTekst = date('d-m-Y', strtotime($_POST['dateAppointment']));
-    echo "Naam: " . $_POST['nameCustomer'] . "</br>";
+    $datumTekst = date('d-m-Y', strtotime($_POST['date']));
+    echo "Naam: " . $_POST['name'] . "</br>";
     echo "E-mailadres: " . $_POST['email'] . "</br>";
     echo "Datum: " . $datumTekst . "</br>";
     echo "Tijd:" . $_POST['time'] . "</br>";
