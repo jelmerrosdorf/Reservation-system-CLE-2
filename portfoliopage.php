@@ -17,7 +17,7 @@
 
 
 <body>
-<header>CutKapsel</header>
+<header></header>
 
 <!-- keuzemenu van alle tabbladen-->
 
@@ -30,7 +30,6 @@
 </div>
 
 <!-- image sources -->
-
 <div class="grid">
     <div class="grid-sizer"></div>
     <div class="grid-item">
