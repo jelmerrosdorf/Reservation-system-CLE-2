@@ -22,23 +22,23 @@
 <main>
     <h1 id="reserveren">Reserveer hier je afspraak!</h1>
 
-    <form action="./confirmationpage.php" method="post">
+    <form action="./connect.php" method="post">
         <div>
-            <label for="nameCustomer">Naam:</label>
-            <input type="text" id="nameCustomer" name="nameCustomer" required>
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" required>
         </div>
         <div>
             <label for="email">E-mailadres:</label>
             <input type="email" id="email" name="email" required>
         </div>
         <div>
-            <label for="dateAppointment">Datum:</label>
-            <input type="date" id="dateAppointment" name="dateAppointment"
+            <label for="date">Datum:</label>
+            <input type="date" id="date" name="date"
                    value="date('Y/m/d')" required pattern="\d{4}-\d{2}-\d{2}">
         </div>
         <div>
-            <label for="appointmentTime">Tijd:</label>
-            <input type="time" id="appointmentTime" name="time" required>
+            <label for="time">Tijd:</label>
+            <input type="time" id="time" name="time" required>
         </div>
         <div>
             <label for="verven">Haar verven?</label>
