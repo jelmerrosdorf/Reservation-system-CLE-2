@@ -48,6 +48,36 @@ footer a {
     background-color: #654321;
     color: white;
 }
+/* twee divs naast elkaar voor de homepage*/
+
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+#firsthome, #secondhome{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#wrapper-home {
+    width: auto;
+    border: 1px solid black;
+}
+#firsthome {
+    border: 1px solid red;
+    float:left;
+    width:50%;
+}
+#secondhome {
+    border: 1px solid green;
+    float:left;
+    width:50%;
+}
 
 header {
     text-align: center;
