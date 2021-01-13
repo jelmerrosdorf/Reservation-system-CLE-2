@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
-<header>Reserveer hier je afspraak!</header>
+<header></header>
 
 
     <div class="topnav">
         <a class="inactive" href="./Homepage.php">Home</a>
         <a class="inactive" href="./portfoliopage.php">Portfolio</a>
-        <a class="inactive" href="./aboutpage.php">Personalia</a>
-        <a class="inactive">Contact</a>
+        <a class="inactive" href="./aboutpage.php">Personalia en contact</a>
         <a class="active" href="./appointmentpage.php">Reserveren</a>
     </div>
 
 <main>
-    <h1 id="reserveren">Reserveren</h1>
+    <h1 id="reserveren">Reserveer hier je afspraak!</h1>
 
     <form action="./confirmationpage.php" method="post">
         <div>
