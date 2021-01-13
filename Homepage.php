@@ -17,6 +17,13 @@
     <a class="inactive" href="./aboutpage.php">Personalia en contact</a>
     <a class="inactive" href="./appointmentpage.php">Reserveren</a>
 </div>
+
+<div id="wrapper-home">
+    <div id="firsthome">Stack Overflow is for professional and enthusiast programmers, people who write code because they love it.</div>
+    <div id="secondhome">When you post a new question, other users will almost immediately see it and try to provide good answers. This often happens in a matter of minutes, so be sure to check back frequently when your question is still new for the best response.</div>
+</div>
+
+
 </body>
 </html>
 
