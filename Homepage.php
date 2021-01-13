@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
-<header>Welkom bij CutKapsel!</header>
+<header></header>
 
 <div class="topnav">
     <a class="active" href="./Homepage.php">Home</a>
     <a class="inactive" href="./portfoliopage.php">Portfolio</a>
-    <a class="inactive" href="./aboutpage.php">Personalia</a>
-    <a class="inactive">Contact</a>
+    <a class="inactive" href="./aboutpage.php">Personalia en contact</a>
     <a class="inactive" href="./appointmentpage.php">Reserveren</a>
 </div>
 </body>
