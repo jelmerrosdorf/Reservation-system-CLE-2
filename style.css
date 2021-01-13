@@ -26,6 +26,7 @@ footer a {
 /*Menu met tabbladen*/
 
 .topnav {
+    border-radius: 5px;
     overflow: hidden;
     background-color: #333;
 }
@@ -70,7 +71,8 @@ footer a {
     width: auto;
 }
 #firsthome {
-    border: #333333 solid 1px;
+    border-radius: 5px;
+    /*border: #333333 solid 1px;*/
     float:left;
     margin-top: 10px;
     margin-left: 10px;
@@ -79,7 +81,8 @@ footer a {
 }
 
 #secondhome {
-    border: #333333 solid 1px;
+    border-radius: 5px;
+    /*border: #333333 solid 1px;*/
     float:left;
     margin-top: 10px;
     margin-right: 10px;
@@ -92,6 +95,7 @@ footer a {
 }
 
 .headerhome{
+    border-radius: 5px;
     text-align: center;
     border: #333333 solid 1px;
     color: white;
@@ -131,10 +135,16 @@ footer {
     color: green;
 }
 
-@media screen and (max-width: 550px) {
+@media only screen and (max-width: 750px) {
     nav {
         display: block;
     }
+    .topnav a{
+        font-size: larger;
+    }
+    /*.nav-item{*/
+    /*    font-size: larger;*/
+    /*}*/
 }
 
 button {
@@ -183,17 +193,22 @@ html { overflow-y: scroll; }
 }
 
 /* ---- .grid-item ---- */
-
+.grid-sizer{
+    position: center;
+}
 .grid-sizer,
 .grid-item {
-    width: 33.333%;
+    width: 32%;
 }
 
 .grid-item {
+
+    margin: 10px;
     float: left;
 }
 
 .grid-item img {
+    border-radius: 5px;
     display: block;
     max-width: 100%;
 }
