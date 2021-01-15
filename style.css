@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     color: rgb(33, 33, 33);
-    font-family: Garamond, serif;
+    font-family: Roboto Slab, Arial, serif;
     background-color: #cbcbcb;
 }
 
@@ -23,9 +23,10 @@ footer a {
 
 
 
-
+/*Menu met tabbladen*/
 
 .topnav {
+    border-radius: 5px;
     overflow: hidden;
     background-color: #333;
 }
@@ -58,7 +59,9 @@ footer a {
     clear: both;
 }
 
+
 #firsthome, #secondhome{
+    background-color: white;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -66,17 +69,41 @@ footer a {
 
 #wrapper-home {
     width: auto;
-    border: 1px solid black;
 }
 #firsthome {
-    border: 1px solid red;
+    border-radius: 5px;
+    /*border: #333333 solid 1px;*/
     float:left;
-    width:50%;
+    margin-top: 10px;
+    margin-left: 10px;
+    width:55%;
+    box-sizing: border-box;
 }
+
 #secondhome {
-    border: 1px solid green;
+    border-radius: 5px;
+    /*border: #333333 solid 1px;*/
     float:left;
-    width:50%;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 30px;
+    width:35%;
+}
+.p-home{
+    margin: 5px;
+    padding:5px;
+}
+
+.headerhome{
+    border-radius: 5px;
+    text-align: center;
+    border: #333333 solid 1px;
+    color: white;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20200807/pngtree-plane-wood-texture-seamless-background-image_387389.jpg);
+    background-size:  100%;
+    background-position: center;
+    padding: 0;
+    margin: 0;
 }
 
 header {
@@ -108,10 +135,16 @@ footer {
     color: green;
 }
 
-@media screen and (max-width: 550px) {
+@media only screen and (max-width: 750px) {
     nav {
         display: block;
     }
+    .topnav a{
+        font-size: larger;
+    }
+    /*.nav-item{*/
+    /*    font-size: larger;*/
+    /*}*/
 }
 
 button {
@@ -160,17 +193,22 @@ html { overflow-y: scroll; }
 }
 
 /* ---- .grid-item ---- */
-
+.grid-sizer{
+    position: center;
+}
 .grid-sizer,
 .grid-item {
-    width: 33.333%;
+    width: 32%;
 }
 
 .grid-item {
+
+    margin: 10px;
     float: left;
 }
 
 .grid-item img {
+    border-radius: 5px;
     display: block;
     max-width: 100%;
 }
