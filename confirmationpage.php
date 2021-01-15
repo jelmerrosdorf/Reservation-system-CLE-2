@@ -34,7 +34,7 @@
     if (isset($_POST['verven'])){
         echo '☑ Verven';
     }
-    //opslaan in database
+
     ?>
 </body>
 

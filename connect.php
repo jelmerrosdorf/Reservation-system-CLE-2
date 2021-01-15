@@ -29,9 +29,19 @@ else {
     $sql = "INSERT INTO appointments (name, email, date, time)
     values ('$name', '$email', '$date', '$time')";
 
+    // Confirm appointment
     if ($conn->query ($sql)) {
-        echo "Je afspraak is goed doorgekomen!";
+        $datumTekst = date('d-m-Y', strtotime($_POST['date']));
+        echo "Je reservering is goed doorgekomen!" . "</br>";
+        echo "Naam: " . $_POST['name'] . "</br>";
+        echo "E-mailadres: " . $_POST['email'] . "</br>";
+        echo "Datum: " . $datumTekst . "</br>";
+        echo "Tijd:" . $_POST['time'] . "</br>";
+
+    // if (isset($_POST['verven'])){
+        // echo '☑ Verven';
     }
+
 else {
     echo "Error: " . $sql ."
     " . $conn->error;
