@@ -34,6 +34,11 @@
         <h1>
             Behandelingen en tarieven
         </h1></br>
+            <h2>Haircut:</h2><h2 class="price">€35,-</h2> <br>
+            <h2>Beard Trim</h2><h2 class="price">€20,-</h2> <br>
+            <h2>Hair and Beard</h2><h2 class="price">€50,-</h2> <br>
+            <h2>Touch up</h2> <h2 class="price">€15,-</h2> <br>
+            <a href="./appointmentpage.php"><button type="button">Maak nu je afspraak!</button></a>
         </div>
     </div>
 </div>
