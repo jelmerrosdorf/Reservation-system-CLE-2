@@ -21,7 +21,7 @@
 <div id="wrapper-home">
     <div id="firsthome">
         <div class="headerhome">
-        <h1>
+        <h1><br>
             Welkom bij CutKapsel!
         </h1></br>
         </div>
@@ -31,7 +31,7 @@
     </div>
     <div id="secondhome">
         <div class="headerhome">
-        <h1>
+        <h1><br>
             Behandelingen en tarieven
         </h1></br>
             <h2>Haircut:</h2><h2 class="price">€35,-</h2> <br>

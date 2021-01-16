@@ -1,3 +1,4 @@
+/*Basic CSS*/
 body {
     margin: 0;
     padding: 0;
@@ -25,9 +26,13 @@ footer a {
     color: white;
 }
 
+ img{
+    size: auto;
+    border-radius: 5px;
+}
 
 
-/*Menu met tabbladen*/
+/*navigatiemenu met tabbladen*/
 
 .topnav {
     border-radius: 5px;
@@ -53,6 +58,7 @@ footer a {
     background-color: #654321;
     color: white;
 }
+/*Homepage*/
 /* twee divs naast elkaar voor de homepage*/
 
 .clearfix:after {
@@ -84,6 +90,8 @@ footer a {
     box-sizing: border-box;
 }
 
+
+
 #secondhome {
     border-radius: 5px;
     /*border: #333333 solid 1px;*/
@@ -110,13 +118,14 @@ footer a {
     margin: 0;
 }
 
+/*!*CSS voor aboutpage*!*/
+
+
+
+
+/*CSS voor header (afbeelding)*/
+
 header {
-    text-align: center;
-    height: 40vh;
-    line-height: 40vh;
-    font-size: 2em;
-    font-weight: bolder;
-    color: white;
     background-image: url(https://i.imgur.com/WuaX8oT.jpg);
     background-size: auto 100%;
     background-position: center;
@@ -131,14 +140,7 @@ footer {
     color: white;
 }
 
-.redText {
-    color: red;
-}
-
-.greenText {
-    color: green;
-}
-
+/*Aanpassingen aan tekst voor kleiner scherm. Extra toegankelijkheid*/
 @media only screen and (max-width: 750px) {
     nav {
         display: block;
@@ -150,6 +152,8 @@ footer {
     /*    font-size: larger;*/
     /*}*/
 }
+
+/*Buttons en invoervelden*/
 
 button {
     border-radius: 5px;
@@ -198,7 +202,7 @@ html { overflow-y: scroll; }
     clear: both;
 }
 
-/* ---- .grid-item ---- */
+/* ---- .grid-item. Foto's in de grid---- */
 .grid-sizer{
     position: center;
 }
