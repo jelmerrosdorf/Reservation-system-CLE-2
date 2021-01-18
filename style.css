@@ -223,3 +223,9 @@ html { overflow-y: scroll; }
     display: block;
     max-width: 100%;
 }
+
+/* Layout for table on read.php */
+tbody tr:nth-child(odd) {
+    background-color: #000000;
+    color: white;
+}
