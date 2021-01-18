@@ -1,51 +1,42 @@
 <?php
-
-// Use the data from the db to put on this page
+// Fix undefined variable $db
 /** @var $db */
+
+// DB required
 require_once "database.php";
 
-
-//
+// Get the information from the database
 $query = "SELECT * FROM appointments";
-$result = mysqli_query($db, $query);
+$result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
-// save the appointments in an empty array
+// Loop through the information and put it in an array
 $appointments = [];
-while($row = mysqli_fetch_assoc($result)) {
+while ($row = mysqli_fetch_assoc($result)) {
     $appointments[] = $row;
 }
 
-// close db connection
+// Close db connection
 mysqli_close($db);
 ?>
 
 <!doctype html>
 <html lang="nl">
 <head>
-    <title>CutKapsel</title>
+    <title>Afspraken</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="readstyle.css"  />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-<h1>Afspraken voor Chris</h1>
 <table>
     <thead>
     <tr>
         <th>#</th>
         <th>Naam</th>
-        <th>Emailadres</th>
+        <th>E-mailadres</th>
         <th>Datum</th>
         <th>Tijd</th>
-        <th colspan="2"></th>
     </tr>
     </thead>
-    <tfoot>
-    <tr>
-        <td colspan="9">Gemaakte afspraken</td>
-    </tr>
-    </tfoot>
-
-    <!-- Table to show the appointments -->
     <tbody>
     <?php foreach ($appointments as $appointment) { ?>
         <tr>
@@ -54,10 +45,13 @@ mysqli_close($db);
             <td><?= $appointment['email'] ?></td>
             <td><?= $appointment['date'] ?></td>
             <td><?= $appointment['time'] ?></td>
+            <td><a href="edit.php?id=<?= $appointment['id'] ?>">Wijzig</a></td>
+            <td><a href="delete.php?id=<?= $appointment['id'] ?>">Verwijder</a></td>
         </tr>
     <?php } ?>
     </tbody>
 </table>
+<a href="appointmentpage.php">Maak een nieuwe afspraak</a>
 </body>
 </html>
 
