@@ -1,15 +1,14 @@
 <?php
 session_start();
+// Check if user is logged in, otherwise move back to read page
+if (isset($_SESSION['loggedInUser'])) {
+    header("Location: read.php");
+    exit;
+}
 
 // DB required
 /** @var $db */
 require_once "database.php";
-
-// Check if user is logged in, otherwise move back to homepage
-if (isset($_SESSION['loggedInUser'])) {
-    header("Location: homepage.php");
-    exit;
-}
 
 // If form is posted, validate it
 if (isset($_POST['submit'])) {
@@ -36,7 +35,7 @@ if (isset($_POST['submit'])) {
             ];
 
             // Redirect to secure page
-            header("Location: homepage.php");
+            header("Location: read.php");
             exit;
         } else {
             $errors[] = 'Je logingegevens zijn onjuist';

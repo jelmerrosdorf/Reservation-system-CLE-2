@@ -1,4 +1,11 @@
 <?php
+session_start();
+// Check if user is logged in, otherwise move back to loginpage
+if (!isset($_SESSION['loggedInUser'])) {
+    header("Location: login.php");
+    exit;
+}
+
 // Fix undefined variable $db & $appointment
 /** @var $db */
 /** @var $appointment */
