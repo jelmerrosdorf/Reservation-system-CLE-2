@@ -107,7 +107,8 @@ footer a {
 }
 
 .headerhome{
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     text-align: center;
     border: #333333 solid 1px;
     color: white;
