@@ -27,15 +27,26 @@
                 Personalia
             </h1><br>
         </div>
+        <div id="firsthome">
         <img src="https://i.imgur.com/7UAFh0p.jpg" alt="">
+        </div>
+        <div id="secondhome">
+            <h2>Chris Elshout</h2>
+            <p class="p-about">Barber-apprentice</p><br>
+            <p class="p-about">Dit is Chris Elshout, kapper in opleiding bij de Barber Parlour in Rotterdam. Ondanks het feit dat hij nog leerling is, knipt hij als een pro! <br> Chris is een kapper voor mannen van alle leeftijden vanaf 12 jaar en werkt in een LHBTQ+-vriendelijke sfeer. Daarnaast kun je tijdens je knipbeurt genieten van een lekker drankje! Zien wij jou binnenkort bij de Barber Parlour? :)</p>
+        </div>
     </div>
     <div id="secondhome">
         <div class="headerhome">
             <h1><br>
                 Contact
             </h1><br>
-
+            <a href="https://www.instagram.com/cutkapsel" target="_blank"><h2>Instagram</h2></a> <br><br>
+            <a href="mailto:"><h2>E-Mail</h2></a><br><br>
+            <a href="tel:+31620922441"><h2>Tel. nr.</h2></a><br><br>
+            <a href="./appointmentpage.php"><button type="button">Maak nu je afspraak!</button></a><br><br>
         </div>
+
     </div>
 </div>
 

@@ -16,20 +16,26 @@ h1 {
     margin: 0;
     padding: 10px;
 }
+
 h2 {
+    font-size: 150%;
     margin: 0;
     padding: 0;
 }
 
+/*Afbeelding en tekst aboutpage*/
 
-footer a {
-    color: white;
+.p-about{
+    font-size: 130%;
+    margin: 0;
+    padding: 2px;
 }
 
- img{
-    size: auto;
+#firsthome img {
+    width: 100%;
     border-radius: 5px;
 }
+
 
 
 /*navigatiemenu met tabbladen*/
@@ -59,7 +65,7 @@ footer a {
     color: white;
 }
 /*Homepage*/
-/* twee divs naast elkaar voor de homepage*/
+/* twee divs naast elkaar voor de homepage en aboutpage*/
 
 .clearfix:after {
     content: " ";
@@ -101,14 +107,18 @@ footer a {
     margin-left: 30px;
     width:35%;
 }
+
+.headerhome a{
+    color: #fff;
+}
+
 .p-home{
     margin: 5px;
     padding:5px;
 }
 
 .headerhome{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 5px;
     text-align: center;
     border: #333333 solid 1px;
     color: white;
@@ -119,15 +129,11 @@ footer a {
     margin: 0;
 }
 
-/*!*CSS voor aboutpage*!*/
 
-
-
-
-/*CSS voor header (afbeelding)*/
+/*CSS voor header (logo)*/
 
 header {
-    background-image: url(https://i.imgur.com/WuaX8oT.jpg);
+    background-image: url(https://i.imgur.com/EhfARHe.jpg);
     background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -146,12 +152,15 @@ footer {
     nav {
         display: block;
     }
-    .topnav a{
+
+    .topnav a {
         font-size: larger;
     }
-    /*.nav-item{*/
-    /*    font-size: larger;*/
-    /*}*/
+}
+@media only screen and (max-width: 1400px){
+        .p-about{
+        font-size: smaller;
+    }
 }
 
 /*Buttons en invoervelden*/
@@ -204,16 +213,13 @@ html { overflow-y: scroll; }
 }
 
 /* ---- .grid-item. Foto's in de grid---- */
-.grid-sizer{
-    position: center;
-}
+
 .grid-sizer,
 .grid-item {
     width: 32%;
 }
 
 .grid-item {
-
     margin: 10px;
     float: left;
 }
