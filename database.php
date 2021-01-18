@@ -1,8 +1,8 @@
 <?php
 
-// General settings for database
+// General settings for the database
 $host = "localhost";
-$database = "rssystem";
+$database = "reservation_system";
 $user = "root";
 $password = "";
 
