@@ -26,8 +26,7 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($db, $query) or die('Error: ' . $query);
 
         if ($result) {
-            header('Location: homepage.php');
-            exit;
+            echo "Je afspraak is goed doorgekomen!";
         } else {
             $errors['db'] = 'Er is iets fout gegaan met het opslaan van de gegevens in de database: ' . mysqli_error($db);
         }
@@ -54,6 +53,7 @@ if (isset($_POST['submit'])) {
         <a class="inactive" href="./portfoliopage.php">Portfolio</a>
         <a class="inactive" href="./aboutpage.php">Personalia en contact</a>
         <a class="active" href="./appointmentpage.php">Reserveren</a>
+        <a class="inactive" href="./login.php">Inloggen</a>
     </div>
 
 <main>
