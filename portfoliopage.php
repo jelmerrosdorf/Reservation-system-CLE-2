@@ -1,6 +1,7 @@
 <?php
 
 ?>
+
 <!DOCTYPE HTML>
 <html lang="nl">
 <meta charset="UTF-8">
@@ -22,7 +23,7 @@
 <!-- keuzemenu van alle tabbladen-->
 
 <div class="topnav">
-    <a class="inactive" href="./Homepage.php">Home</a>
+    <a class="inactive" href="homepage.php">Home</a>
     <a class="active" href="./portfoliopage.php">Portfolio</a>
     <a class="inactive" href="./aboutpage.php">Personalia en contact</a>
     <a class="inactive" href="./appointmentpage.php">Reserveren</a>

@@ -12,7 +12,7 @@
 <header></header>
 
 <div class="topnav">
-    <a class="active" href="./Homepage.php">Home</a>
+    <a class="active" href="./homepage.php">Home</a>
     <a class="inactive" href="./portfoliopage.php">Portfolio</a>
     <a class="inactive" href="./aboutpage.php">Personalia en contact</a>
     <a class="inactive" href="./appointmentpage.php">Reserveren</a>
