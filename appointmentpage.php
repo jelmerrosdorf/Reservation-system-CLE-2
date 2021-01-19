@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($db, $query) or die('Error: ' . $query);
 
         if ($result) {
-            echo "Je afspraak is goed doorgekomen!";
+            echo "";
         } else {
             $errors['db'] = 'Er is iets fout gegaan met het opslaan van de gegevens in de database: ' . mysqli_error($db);
         }
@@ -82,6 +82,11 @@ if (isset($_POST['submit'])) {
         </div>
         <div>
             <input type="submit" name="submit"/>
+        </div>
+        <div>
+            <p><?php if (isset($_POST['submit']) && (empty($errors))) echo "Je afspraak is goed doorgekomen!" ?>
+
+            </p>
         </div>
     </form>
 </main>
