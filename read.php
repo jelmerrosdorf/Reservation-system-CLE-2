@@ -58,7 +58,7 @@ mysqli_close($db);
     <?php } ?>
     </tbody>
 </table>
-<a href="appointmentpage.php">Maak een nieuwe afspraak</a>
+<a class="readpageappointment" href="appointmentpage.php">Maak een nieuwe afspraak</a>
 </body>
 </html>
 

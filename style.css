@@ -248,18 +248,28 @@ tbody tr:nth-child(odd) {
     color: white;
 }
 
+tbody tr:nth-child(even) {
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20200807/pngtree-plane-wood-texture-seamless-background-image_387389.jpg);
+    color: white;
+}
+
 thead, tbody{
     position: center;
 }
 
-tr{
-    padding: 5px;
-}
-
 th{
-    background-color: #000000;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20200807/pngtree-plane-wood-texture-seamless-background-image_387389.jpg);
     color: #fff;
 }
+
 tbody a{
     color: white;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+.readpageappointment {
+    color: #532810;
 }
