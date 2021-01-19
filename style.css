@@ -132,20 +132,32 @@ h2 {
 
 /*CSS voor header (logo)*/
 
-header {
-    background-image: url(https://i.imgur.com/EhfARHe.jpg);
-    background-size: auto 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #fff;
+.logo{
+    border: solid 2px #333;
 }
 
-footer {
-    background-color: #333439;
-    text-align: center;
-    padding: 70px;
-    color: white;
-}
+/*header {*/
+/*    text-align: center;*/
+/*    height: 40vh;*/
+/*    line-height: 40vh;*/
+/*    font-size: 2em;*/
+/*    font-weight: bolder;*/
+/*    color: white;*/
+/*    background-image: url(https://i.imgur.com/WuaX8oT.jpg);*/
+/*    background-size: auto 100%;*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-color: #fff;*/
+/*}*/
+
+/*Footer CSS (obsolete)*/
+
+/*footer {*/
+/*    background-color: #333439;*/
+/*    text-align: center;*/
+    /*padding: 70px;*/
+    /*color: white;*/
+/*}*/
 
 /*Aanpassingen aan tekst voor kleiner scherm. Extra toegankelijkheid*/
 @media only screen and (max-width: 750px) {
@@ -234,4 +246,17 @@ html { overflow-y: scroll; }
 tbody tr:nth-child(odd) {
     background-color: #000000;
     color: white;
+}
+
+thead, tbody{
+    position: center;
+}
+
+tr{
+    padding: 5px;
+}
+
+th{
+    background-color: #000000;
+    color: #fff;
 }
