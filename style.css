@@ -260,3 +260,6 @@ th{
     background-color: #000000;
     color: #fff;
 }
+tbody a{
+    color: white;
+}
