@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
+
 <header></header>
 
+<!--Menu voor de tabbladen-->
 <div class="topnav">
     <a class="active" href="./homepage.php">Home</a>
     <a class="inactive" href="./portfoliopage.php">Portfolio</a>
@@ -19,7 +21,11 @@
     <a class="inactive" href="./login.php">Inloggen</a>
 </div>
 
+
+
 <div id="wrapper-home">
+
+    <!--linker div-->
     <div id="firsthome">
         <div class="headerhome">
         <h1><br>
@@ -27,9 +33,11 @@
         </h1></br>
         </div>
         <p class="p-home">
-            Lorum ipsum hkjfhkjsdhgsjhgkajh
+            <img class="logo" src="https://i.imgur.com/WuaX8oT.jpg" alt="logo">
         </p>
     </div>
+
+<!--Rechter div-->
     <div id="secondhome">
         <div class="headerhome">
         <h1><br>
@@ -39,7 +47,7 @@
             <h2>Beard Trim</h2><h2 class="price">€20,-</h2> <br>
             <h2>Hair and Beard</h2><h2 class="price">€50,-</h2> <br>
             <h2>Touch up</h2> <h2 class="price">€15,-</h2> <br>
-            <a href="./appointmentpage.php"><button type="button">Maak nu je afspraak!</button></a>
+            <a href="./appointmentpage.php"><button type="button">Maak nu je afspraak!</button></a><br><br>
         </div>
     </div>
 </div>
