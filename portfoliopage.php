@@ -22,13 +22,13 @@
 
 <!-- keuzemenu van alle tabbladen-->
 
-<div class="topnav">
+<nav class="topnav">
     <a class="inactive" href="homepage.php">Home</a>
     <a class="active" href="./portfoliopage.php">Portfolio</a>
     <a class="inactive" href="./aboutpage.php">Personalia en contact</a>
     <a class="inactive" href="./appointmentpage.php">Reserveren</a>
     <a class="inactive" href="./login.php">Inloggen</a>
-</div>
+</nav>
 
 <!-- image sources -->
 <div class="grid">

@@ -48,13 +48,13 @@ if (isset($_POST['submit'])) {
 <header></header>
 
 
-    <div class="topnav">
+    <nav class="topnav">
         <a class="inactive" href="homepage.php">Home</a>
         <a class="inactive" href="./portfoliopage.php">Portfolio</a>
         <a class="inactive" href="./aboutpage.php">Personalia en contact</a>
         <a class="active" href="./appointmentpage.php">Reserveren</a>
         <a class="inactive" href="./login.php">Inloggen</a>
-    </div>
+    </nav>
 
 <main>
     <h1 id="reserveren">Reserveer hier je afspraak!</h1>
