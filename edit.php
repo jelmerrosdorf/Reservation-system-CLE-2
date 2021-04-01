@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
     // Adds in the form validation
     require_once "form-validation.php";
 
-    // Save variables to array so the form won't break (??? Not sure about this)
+    // Save variables to array so the form won't break
     $appointmentsArray = [
         'name' => $name,
         'email' => $email,
