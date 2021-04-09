@@ -60,6 +60,7 @@ if (isset($_POST['submit'])) {
     <div>
         <label for="username">Gebruikersnaam</label>
         <input id="username" type="text" name="username" value="<?= $username ?>"/>
+        <!-- Postback username when there are no errors-->
         <span class="errors"><?= isset($errors['username']) ? $errors['username'] : '' ?></span>
     </div>
     <div>

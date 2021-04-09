@@ -83,25 +83,27 @@ mysqli_close($db);
 
 <form action="" method="post">
     <div>
-        <!-- htmlentities for protection -->
+
         <label for="name">Naam</label>
+        <!-- htmlentities for protection -->
         <input id="name" type="text" name="name" value="<?= htmlentities($appointment['name']) ?>"/>
-        <span style="color:red" class="errors"><?= isset($errors['name']) ? $errors['name'] : '' ?></span>
+        <!-- Postback name when there are no errors-->
+        <span class="errors"><?= isset($errors['name']) ? $errors['name'] : '' ?></span>
     </div>
     <div>
         <label for="email">E-mailadres</label>
         <input id="email" type="text" name="email" value="<?= htmlentities($appointment['email']) ?>"/>
-        <span style="color:red" class="errors"><?= isset($errors['email']) ? $errors['email'] : '' ?></span>
+        <span class="errors"><?= isset($errors['email']) ? $errors['email'] : '' ?></span>
     </div>
     <div>
         <label for="date">Datum</label>
         <input id="date" type="text" name="date" value="<?= htmlentities($appointment['date']) ?>"/>
-        <span style="color:red" class="errors"><?= isset($errors['date']) ? $errors['date'] : '' ?></span>
+        <span class="errors"><?= isset($errors['date']) ? $errors['date'] : '' ?></span>
     </div>
     <div>
         <label for="time">Tijd</label>
         <input id="time" type="text" name="time" value="<?= htmlentities($appointment['time']) ?>"/>
-        <span style="color:red" class="errors"><?= isset($errors['time']) ? $errors['time'] : '' ?></span>
+        <span class="errors"><?= isset($errors['time']) ? $errors['time'] : '' ?></span>
     </div>
     <div>
         <input type="hidden" name="id" value="<?= $appointmentId ?>"/>

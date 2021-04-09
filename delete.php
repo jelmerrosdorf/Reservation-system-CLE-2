@@ -1,6 +1,6 @@
 <?php
 session_start();
-// This page is secured: if user isn't logged in, redirect to loginpage
+// This page is secured: if user isn't logged in, redirect to 'login' page
 if (!isset($_SESSION['loggedInUser'])) {
     header("Location: login.php");
     exit;
@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
 
     if(mysqli_num_rows($result) == 1)
     {
-        $appointment = mysqli_fetch_assoc($result);
+        $account = mysqli_fetch_assoc($result);
     }
     else {
         // Redirect to 'read' page when db returns more or less than one result
@@ -59,9 +59,9 @@ if (isset($_POST['submit'])) {
 <body>
 <form action="" method="post">
     <p>
-        Weet je zeker dat je de afspraak van "<?= $appointment['name']?>" wil verwijderen?
+        Weet je zeker dat je je account wil verwijderen?
     </p>
-    <input type="hidden" name="id" value="<?= $appointment['id'] ?>"/>
+    <input type="hidden" name="id" value="<?= $account['id'] ?>"/>
     <input type="submit" name="submit" value="Verwijderen"/>
 </form>
 </body>

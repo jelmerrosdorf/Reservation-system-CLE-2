@@ -17,7 +17,8 @@
 <body>
 <header></header>
 
-<!-- keuzemenu van alle tabbladen-->
+
+    <!-- Navigational menu -->
 
 <nav class="topnav">
     <a class="inactive" href="homepage.php">Home</a>
@@ -27,7 +28,9 @@
     <a class="inactive" href="./login.php">Inloggen</a>
 </nav>
 
-<!-- image sources -->
+<main>
+
+<!-- Grid that contains images -->
 <div class="grid">
     <div class="grid-sizer"></div>
     <div class="grid-item">
@@ -86,7 +89,11 @@
     </div>
 </div>
 
+</main>
 
+<footer>
+    3MAC Enterprises© 2020-2021 & Rosdorf BV.© 2020-2021
+</footer>
 
 </body>
 </html>

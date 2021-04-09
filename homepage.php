@@ -12,7 +12,8 @@
 
 <header></header>
 
-<!--Menu voor de tabbladen-->
+
+<!-- Navigational menu -->
 <nav class="topnav">
     <a class="active" href="./homepage.php">Home</a>
     <a class="inactive" href="./portfoliopage.php">Portfolio</a>
@@ -21,12 +22,12 @@
     <a class="inactive" href="./login.php">Inloggen</a>
 </nav>
 
-
+<main>
 
 <div id="wrapper-home">
 
     <!--linker div-->
-    <div id="firsthome">
+    <section class="leftsection">
         <div class="headerhome">
         <h1><br>
             Welkom bij CutKapsel!
@@ -35,10 +36,10 @@
         <p class="p-home">
             <img class="logo" src="https://i.imgur.com/WuaX8oT.jpg" alt="logo">
         </p>
-    </div>
+    </section>
 
 <!--Rechter div-->
-    <div id="secondhome">
+    <section class="rightsection">
         <div class="headerhome">
         <h1><br>
             Behandelingen en tarieven
@@ -50,9 +51,16 @@
             <h2>Zowel contant betalen als pinnen <br>mogelijk op locatie!</h2><br>
             <a href="./appointmentpage.php"><button type="button">Maak nu je afspraak!</button></a><br><br>
         </div>
-    </div>
+    </section>
 </div>
 
+</main>
+
+<br>
+
+<footer>
+    <p> 3MAC Enterprises© 2020-2021 & Rosdorf BV.© 2020-2021</p>
+</footer>
 
 </body>
 </html>

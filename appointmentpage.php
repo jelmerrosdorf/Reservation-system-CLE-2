@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
 <body>
 <header></header>
 
-
+<!-- Navigational menu -->
     <nav class="topnav">
         <a class="inactive" href="homepage.php">Home</a>
         <a class="inactive" href="./portfoliopage.php">Portfolio</a>
@@ -59,9 +59,10 @@ if (isset($_POST['submit'])) {
 
     <form action="" method="post">
         <div>
-            <!-- htmlentities for protection -->
             <label for="name">Naam</label>
+            <!-- htmlentities for protection -->
             <input id="name" type="text" name="name" value="<?= isset($name) ? htmlentities($name) : '' ?>"/>
+            <!-- Postback name when there are no errors-->
             <span class="errors"><?= isset($errors['name']) ? $errors['name'] : '' ?></span>
         </div>
         <div>
@@ -90,5 +91,12 @@ if (isset($_POST['submit'])) {
     </form>
 
 </main>
+
+<br>
+
+<footer>
+    <p> 3MAC Enterprises© 2020-2021 & Rosdorf BV.© 2020-2021</p>
+</footer>
+
 </body>
 </html>

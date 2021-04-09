@@ -55,9 +55,10 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
 <h1>Login</h1>
-// Show errors if there are any
+<!-- Show errors if there are any-->
 <?php if (isset($errors) && !empty($errors)) { ?>
     <ul class="errors">
+<!--    Loop through errors and show them     -->
         <?php for ($i = 0; $i < count($errors); $i++) { ?>
             <li><?= $errors[$i]; ?></li>
         <?php } ?>
