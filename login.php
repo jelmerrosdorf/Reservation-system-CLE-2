@@ -1,18 +1,18 @@
 <?php
 session_start();
-// Check if user is logged in, otherwise move back to read page
+// If user is already logged in, redirect to 'read' page
 if (isset($_SESSION['loggedInUser'])) {
     header("Location: read.php");
     exit;
 }
 
-// DB required
+// Fix undefined variable $db
 /** @var $db */
 require_once "database.php";
 
-// If form is posted, validate it
+// If submit is pressed
 if (isset($_POST['submit'])) {
-    // Retrieve posted data
+    // Get posted data
     $username = mysqli_escape_string($db, $_POST['username']);
     $password = $_POST['password'];
 
@@ -23,18 +23,18 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($db, $query) or die('Error: ' . $query);
     $user = mysqli_fetch_assoc($result);
 
-    // Check if username exists in database
+    // Check if user exists
     $errors = [];
     if ($user) {
-        // Validate password
+
         if (password_verify($password, $user['password'])) {
-            // Set username for later use in session
+            // Save username for use in session
             $_SESSION['loggedInUser'] = [
                 'name' => $user['name'],
                 'id' => $user['id']
             ];
 
-            // Redirect to secure page
+            // Redirect to 'read' page
             header("Location: read.php");
             exit;
         } else {
@@ -55,6 +55,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
 <h1>Login</h1>
+// Show errors if there are any
 <?php if (isset($errors) && !empty($errors)) { ?>
     <ul class="errors">
         <?php for ($i = 0; $i < count($errors); $i++) { ?>

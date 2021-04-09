@@ -1,5 +1,5 @@
 <?php
-
+// No PHP necessary, kept the page as .php for potential future PHP code
 ?>
 <!DOCTYPE HTML>
 <html lang="nl">

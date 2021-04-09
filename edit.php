@@ -1,6 +1,6 @@
 <?php
 session_start();
-// Check if user is logged in, otherwise move back to loginpage
+// This page is secured: if user isn't logged in, redirect to loginpage
 if (!isset($_SESSION['loggedInUser'])) {
     header("Location: login.php");
     exit;
@@ -10,22 +10,19 @@ if (!isset($_SESSION['loggedInUser'])) {
 /** @var $db */
 /** @var $appointment */
 
-// DB required
 require_once "database.php";
 
-// Check if form is submitted, else do nothing
+// If submit is pressed
 if (isset($_POST['submit'])) {
-    // Post back the data to the user, first retrieve data from $_POST
+    // Post back the data, mysqli_escape_string for protection from injections
     $appointmentId = mysqli_escape_string($db, $_POST['id']);
     $name = mysqli_escape_string($db, $_POST['name']);
     $email = mysqli_escape_string($db, $_POST['email']);
     $date = mysqli_escape_string($db, $_POST['date']);
     $time = mysqli_escape_string($db, $_POST['time']);
 
-    // Adds in the form validation
     require_once "form-validation.php";
 
-    // Save variables to array so the form won't break
     $appointmentsArray = [
         'name' => $name,
         'email' => $email,
@@ -33,14 +30,15 @@ if (isset($_POST['submit'])) {
         'time' => $time,
     ];
 
-    // If there are no errors...
+    // If no errors are present
     if (empty($errors)) {
-        // the edited data will be saved to the db
+        // Save data to db
         $query = "UPDATE appointments
                   SET name = '$name', email = '$email', date = '$date', time ='$time'
                   WHERE id = '$appointmentId'";
         $result = mysqli_query($db, $query);
 
+        // If data is edited, redirect to 'read' page
         if ($result) {
             header('Location: read.php');
             exit;
@@ -50,16 +48,16 @@ if (isset($_POST['submit'])) {
     }
 
 } else if (isset($_GET['id'])) {
-    // Get the id parameter from the super global $_GET
+    // Get the given parameter for id, set variable
     $appointmentId = $_GET['id'];
 
-    // Get the data from the database (checks if there is only one result first)
+    // Get data from db, first check if there is only one result
     $query = "SELECT * FROM appointments WHERE id = " . mysqli_escape_string($db, $appointmentId);
     $result = mysqli_query($db, $query);
     if (mysqli_num_rows($result) == 1) {
         $appointment = mysqli_fetch_assoc($result);
     } else {
-        // Redirect when db returns no data
+        // Redirect when no data is returned
         header('Location: read.php');
         exit;
     }
@@ -68,7 +66,6 @@ if (isset($_POST['submit'])) {
     exit;
 }
 
-// Close db connection
 mysqli_close($db);
 ?>
 
@@ -86,6 +83,7 @@ mysqli_close($db);
 
 <form action="" method="post">
     <div>
+        <!-- htmlentities for protection -->
         <label for="name">Naam</label>
         <input id="name" type="text" name="name" value="<?= htmlentities($appointment['name']) ?>"/>
         <span style="color:red" class="errors"><?= isset($errors['name']) ? $errors['name'] : '' ?></span>

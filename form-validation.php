@@ -1,5 +1,5 @@
 <?php
-// This page checks if the data submitted in the form is valid and generates an error if it is not
+// Check if the data submitted in the form is valid
 
 // Fix undefined variables error
 /** @var $name  */

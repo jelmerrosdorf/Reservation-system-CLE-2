@@ -4,21 +4,22 @@ session_start();
 $username = '';
 $password = '';
 
-// If session doesn't exist, redirect
+// If session doesn't exist, redirect to 'homepage'
 if (isset($_SESSION['loggedInUser'])) {
     header('Location: homepage.php');
     exit;
 }
 
 if (isset($_POST['submit'])) {
-    // Require db
+    // Fix undefined variable $db
     /** @var $db */
     require_once "database.php";
 
-    // Postback the data showed to the user
+    // Post back the data, mysqli_escape_string for protection from injections
     $username = mysqli_real_escape_string($db, $_POST['username']);
     $password = $_POST['password'];
 
+    // Show errors if there are any
     $errors = [];
     if ($username == '') {
         $errors['username'] = 'De gebruikersnaam mag niet leeg zijn.';
@@ -27,6 +28,7 @@ if (isset($_POST['submit'])) {
         $errors['password'] = 'Het wachtwoord mag niet leeg zijn.';
     }
 
+    // If there are no errors, hash the pw and insert the data into db
     if (empty($errors)) {
         $password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -34,6 +36,7 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($db, $query)
         or die('Error: ' . $query);
 
+        // If successful, redirect to 'homepage'
         if ($result) {
             header('Location: homepage.php');
             exit;
@@ -41,7 +44,6 @@ if (isset($_POST['submit'])) {
             $errors[] = 'Er is iets fout gegaan met de database. ' . mysqli_error($db);
         }
 
-        // Close db connection
         mysqli_close($db);
     }
 }

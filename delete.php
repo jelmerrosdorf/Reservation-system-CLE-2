@@ -1,6 +1,6 @@
 <?php
 session_start();
-// Check if user is logged in, otherwise move back to loginpage
+// This page is secured: if user isn't logged in, redirect to loginpage
 if (!isset($_SESSION['loggedInUser'])) {
     header("Location: login.php");
     exit;
@@ -10,25 +10,23 @@ if (!isset($_SESSION['loggedInUser'])) {
 /** @var $db */
 /** @var $appointment */
 
-// DB required
 require_once "database.php";
 
-// If the submit button gets pressed...
+// If submit is pressed
 if (isset($_POST['submit'])) {
 
-    // delete data from db
+    // Delete selected appointment from db
     $query = "DELETE FROM appointments WHERE id = " . mysqli_escape_string($db, $_POST['id']);
 
     mysqli_query($db, $query) or die ('Error: ' . mysqli_error($db));
 
-    // Close db connection
     mysqli_close($db);
 
-    // Redirect to 'read' page after deletion
+    // Redirect to 'read' page
     header("Location: read.php");
 
 } else if(isset($_GET['id'])) {
-    // Get the id parameter from the super global $_GET
+    // Get the given parameter for id, set variable
     $appointmentId = $_GET['id'];
 
     // Get the data from the db
@@ -40,12 +38,12 @@ if (isset($_POST['submit'])) {
         $appointment = mysqli_fetch_assoc($result);
     }
     else {
-        // Redirect to 'read' page when db returns no results (or more than one result)
+        // Redirect to 'read' page when db returns more or less than one result
         header('Location: read.php');
         exit;
     }
 } else {
-    // this gets executed if id was not present in the url or the form was not submitted
+    // If no id is present or submit isn't pressed
     header('Location: read.php');
     exit;
 }

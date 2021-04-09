@@ -1,5 +1,5 @@
 <?php
-
+// No PHP necessary, kept the page as .php for potential future PHP code
 ?>
 
 <!DOCTYPE HTML>
@@ -7,12 +7,9 @@
 <meta charset="UTF-8">
 <title>CutKapsel</title>
 
-<!-- css linken aan deze php-->
 
 <link rel="stylesheet" href="./style.css"/>
 
-
-<!--javaScript linken aan deze page-->
 
 <script src="portfoliopage.js"></script>
 

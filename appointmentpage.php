@@ -2,22 +2,20 @@
 // Fix undefined variable $db
 /** @var $db */
 
-// DB required
 require_once "database.php";
 
-// Check if form is submitted
+// If submit is pressed
 if (isset($_POST['submit'])) {
 
-    // Post back the data to the user, first retrieve data from $_POST
+    // Post back the data, mysqli_escape_string for protection from injections
     $name = mysqli_escape_string($db, $_POST['name']);
     $email = mysqli_escape_string($db, $_POST['email']);
     $date = mysqli_escape_string($db, $_POST['date']);
     $time = mysqli_escape_string($db, $_POST['time']);
 
-    // Adds in the form validation
     require_once "form-validation.php";
 
-    // If there are no errors the data will be saved to the db
+    // Check for errors
     if (empty($errors)) {
 
         // Save data to db
@@ -25,13 +23,13 @@ if (isset($_POST['submit'])) {
                   VALUES ('$name', '$email', '$date', '$time')";
         $result = mysqli_query($db, $query) or die('Error: ' . $query);
 
+        // If result is true, do nothing. Else, give the errors
         if ($result) {
-            echo "";
+
         } else {
             $errors['db'] = 'Er is iets fout gegaan met het opslaan van de gegevens in de database: ' . mysqli_error($db);
         }
 
-        // Close the db connection
         mysqli_close($db);
     }
 }
@@ -61,6 +59,7 @@ if (isset($_POST['submit'])) {
 
     <form action="" method="post">
         <div>
+            <!-- htmlentities for protection -->
             <label for="name">Naam</label>
             <input id="name" type="text" name="name" value="<?= isset($name) ? htmlentities($name) : '' ?>"/>
             <span class="errors"><?= isset($errors['name']) ? $errors['name'] : '' ?></span>
@@ -84,11 +83,12 @@ if (isset($_POST['submit'])) {
             <input type="submit" name="submit"/>
         </div>
         <div>
-            <p><?php if (isset($_POST['submit']) && (empty($errors))) echo "Je afspraak is goed doorgekomen!" ?>
 
-            </p>
+<!-- If submit is pressed and there are no errors, show confirmation message-->
+            <p><?php if (isset($_POST['submit']) && (empty($errors))) echo "Je afspraak is goed doorgekomen!" ?></p>
         </div>
     </form>
+
 </main>
 </body>
 </html>
