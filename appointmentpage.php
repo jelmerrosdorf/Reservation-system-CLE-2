@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
 
         // If result is true, do nothing. Else, give the errors
         if ($result) {
-
+            echo "";
         } else {
             $errors['db'] = 'Er is iets fout gegaan met het opslaan van de gegevens in de database: ' . mysqli_error($db);
         }
@@ -60,9 +60,9 @@ if (isset($_POST['submit'])) {
     <form action="" method="post">
         <div>
             <label for="name">Naam</label>
-            <!-- htmlentities for protection -->
+            <!-- Postback name if set, htmlentities for protection -->
             <input id="name" type="text" name="name" value="<?= isset($name) ? htmlentities($name) : '' ?>"/>
-            <!-- Postback name when there are no errors-->
+            <!-- Postback error name when there are any, else place nothing-->
             <span class="errors"><?= isset($errors['name']) ? $errors['name'] : '' ?></span>
         </div>
         <div>
@@ -83,9 +83,9 @@ if (isset($_POST['submit'])) {
         <div>
             <input type="submit" name="submit"/>
         </div>
-        <div>
 
-<!-- If submit is pressed and there are no errors, show confirmation message-->
+        <div>
+        <!-- If submit is pressed and there are no errors, show confirmation message-->
             <p><?php if (isset($_POST['submit']) && (empty($errors))) echo "Je afspraak is goed doorgekomen!" ?></p>
         </div>
     </form>
