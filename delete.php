@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
 <body>
 <form action="" method="post">
     <p>
-        Weet je zeker dat je je account wil verwijderen?
+        Weet je zeker dat je je afspraak wil verwijderen?
     </p>
     <input type="hidden" name="id" value="<?= $account['id'] ?>"/>
     <input type="submit" name="submit" value="Verwijderen"/>
