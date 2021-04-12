@@ -9,10 +9,10 @@ if (!isset($_SESSION['loggedInUser'])) {
 // Fix undefined variable $db
 /** @var $db */
 
-require_once "database.php";
+require_once "includes/database.php";
 
 // Get data from db
-$query = "SELECT * FROM users";
+$query = "SELECT * FROM appointments";
 $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
 // Loop through the data and show it in an array
