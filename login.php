@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
 <head>
     <title>Login CutKapsel</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
 <h1>Login</h1>

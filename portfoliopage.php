@@ -8,10 +8,10 @@
 <title>CutKapsel</title>
 
 
-<link rel="stylesheet" href="./style.css"/>
+<link rel="stylesheet" href="css/style.css"/>
 
 
-<script src="portfoliopage.js"></script>
+<script src="js/portfoliopage.js"></script>
 
 
 <body>
