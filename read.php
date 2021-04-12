@@ -12,7 +12,7 @@ if (!isset($_SESSION['loggedInUser'])) {
 require_once "database.php";
 
 // Get data from db
-$query = "SELECT * FROM users";
+$query = "SELECT * FROM appointments";
 $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
 // Loop through the data and show it in an array
