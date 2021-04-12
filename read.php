@@ -9,7 +9,7 @@ if (!isset($_SESSION['loggedInUser'])) {
 // Fix undefined variable $db
 /** @var $db */
 
-require_once "database.php";
+require_once "includes/database.php";
 
 // Get data from db
 $query = "SELECT * FROM appointments";

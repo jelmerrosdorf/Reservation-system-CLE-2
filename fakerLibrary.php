@@ -1,6 +1,6 @@
 <?php
 // connect to database
-require_once "../rssystem/database.php";
+require_once "../rssystem/includes/database.php";
 //requires faker
 require_once "../rssystem/vendor/fzaninotto/faker/src/autoload.php";
 require_once "../rssystem/vendor/fzaninotto/faker/src/Faker/Provider/base.php";

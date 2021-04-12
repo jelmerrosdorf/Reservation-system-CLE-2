@@ -10,7 +10,7 @@ if (!isset($_SESSION['loggedInUser'])) {
 /** @var $db */
 /** @var $appointment */
 
-require_once "database.php";
+require_once "includes/database.php";
 
 // If submit is pressed
 if (isset($_POST['submit'])) {
@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     $date = mysqli_escape_string($db, $_POST['date']);
     $time = mysqli_escape_string($db, $_POST['time']);
 
-    require_once "form-validation.php";
+    require_once "includes/form-validation.php";
 
     $appointmentsArray = [
         'name' => $name,

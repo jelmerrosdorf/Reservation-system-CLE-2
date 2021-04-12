@@ -13,7 +13,7 @@ if (isset($_SESSION['loggedInUser'])) {
 if (isset($_POST['submit'])) {
     // Fix undefined variable $db
     /** @var $db */
-    require_once "database.php";
+    require_once "includes/database.php";
 
     // Post back the data, mysqli_escape_string for protection from injections
     $username = mysqli_real_escape_string($db, $_POST['username']);

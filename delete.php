@@ -10,7 +10,7 @@ if (!isset($_SESSION['loggedInUser'])) {
 /** @var $db */
 /** @var $appointment */
 
-require_once "database.php";
+require_once "includes/database.php";
 
 // If submit is pressed
 if (isset($_POST['submit'])) {
